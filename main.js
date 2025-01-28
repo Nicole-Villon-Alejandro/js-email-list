@@ -6,19 +6,37 @@ Inserire un bottone che al click faccia il fetch altre 10 mail (sostituendo le a
 
 //Endpoint: https://flynn.boolean.careers/exercises/api/random/mail
 
+
+//const emaillist = document.getElementById('email-list');
+
+for( let i = 0; i < 10; i++ ){
+
+
 fetch("https://flynn.boolean.careers/exercises/api/random/mail")
 .then(response => response.json())
 .then(data => {
 
     console.log(data.response);
-    risultato.innerHTML = data.response
+    //risultato.innerHTML = data.response
+
+})
+    
+   
+}
+
+fetch("https://flynn.boolean.careers/exercises/api/random/mail")
+.then(response => response.json())
+.then(data => {
+
+    console.log(data.response);
 
 })
 
 .catch(error => {
     // codice da eseguire in caso di errore
-    console.error(error);
+    console.error (error);
 });
+
 
 
 
